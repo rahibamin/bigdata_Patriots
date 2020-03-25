@@ -70,3 +70,13 @@ For example, jdbc:postgresql://myhost/db?ssl=true for postgres database.
 schematool -initSchema -dbType derby
 
 
+yarn-site.xml
+<property>
+     <name>yarn.nodemanager.aux-services</name>
+    <value>mapreduce_shuffle</value>
+  </property>
+  <property>
+    <name>yarn.nodemanager.aux-services.mapreduce_shuffle.class</name>
+    <value>org.apache.hadoop.mapred.ShuffleHandler</value>
+  </property>
+
